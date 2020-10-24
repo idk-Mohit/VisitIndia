@@ -27,7 +27,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 // *************************section 2 slideshow****************************************
-var slideIndex1 = 0;
+{
+  var slideIndex1 = 0;
 carousel();
 
 function carousel() {
@@ -41,7 +42,7 @@ function carousel() {
   x[slideIndex1-1].style.display = "block";
   setTimeout(carousel, 3000); // Change image every 2 seconds
 }
-
+}
 {
   var slideIndex2 = 0;
 carousel();
