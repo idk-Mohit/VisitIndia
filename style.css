@@ -1,6 +1,6 @@
 *
 {
-font-family: 'Grandstander',Montserrat;
+font-family: 'Grandstander',"Montserrat";
     font-size: 16px;
     font-weight: 600;
     margin: 0;
@@ -8,12 +8,6 @@ font-family: 'Grandstander',Montserrat;
     box-sizing: border-box;
     line-height: 1.5;
 }
-body{
-
-}
-
-
-
 
 body::-webkit-scrollbar{
   width: 1.4em;
@@ -93,9 +87,12 @@ nav {
 }
 
 nav .Name h1{
-text-align: center;
-margin:15px 0 15px 0;
-font-size: 30px;
+text-align: right;
+margin:15px 0 10px 0;
+font-size: 40px;
+}
+nav .Name h1:hover{
+  cursor: none;
 }
 nav a{
   display: inline-block;
@@ -108,11 +105,13 @@ nav .nav-links{
 }
 nav .nav-links a{
  margin-top: 20px;
+ margin: 20px 20px 0 ;
+ transition: 1s;
 }
 nav .nav-links a:hover
-{
+{ transition: 0.3s;
   color:#D22195;
-
+  transform: scale(1.06);
 }
 nav i.fas{
   padding: 0 10px 0 10px;
@@ -141,9 +140,13 @@ nav i.fa-phone{
 }
   nav .Name{
     background-color: #23A6FF;
+
+  }
+  nav .Name h1{
+    text-align: center;
   }
   nav .nav-links a{
-  margin-top: 20px;
+  margin:20px 10px 0;
 }
 }
 
@@ -589,147 +592,5 @@ footer h2
   color: white;
 
 }
-#contact{
 
-}
-/*contact form*/
-span, button, input {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
 
-.background {
-  display: flex;
-  margin: 150px auto;
-}
-
-.container {
-  flex: 0 1 700px;
-  margin: auto;
-  padding: 10px;
-}
-
-.screen {
-  position: relative;
-  background: #2F2F2B;
-  border-radius: 15px;
-}
-
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
-  z-index: -1;
-}
-
-.screen-body {
-  display: flex;
-}
-
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
-}
-
-.screen-body-item.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.app-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: #50E700;
-  font-size: 35px;
-}
-.app-title span{
-  font-size: 25px;
-}
-
-.app-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #edf0f1;
-}
-
-.app-contact {
-  margin-top: auto;
-  font-size: 13px;
-  color: #888;
-}
-
-.app-form-group {
-  margin-bottom: 15px;
-}
-
-.app-form-group.message {
-  margin-top: 40px;
-}
-
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
-}
-
-.app-form-control {
-  width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color .2s;
-}
-
-.app-form-control::placeholder {
-  color: #666;
-}
-
-.app-form-control:focus {
-  border-bottom-color: #ddd;
-}
-
-#query-button button
-{   font-family: "Montserrat", sans-serif;
-    margin-top: 5px;
-   color: #fff;
-    padding: 2px;
-    background-color: #2F2F2B;
-    box-shadow: none;
-  transition: 1s;
-}
-
-#query-button button:hover{
-  font-family: "Montserrat", sans-serif;
-    
-   cursor: pointer;
-    margin-top: 5px;
-    transition: 2s;
-    padding: 2px;
-   
-    
-}
-@media (max-width: 800px)
-{
-  .container {
-  flex: 0 1 90%;
-  margin: auto;
-  padding: 10px;
-}
-}
