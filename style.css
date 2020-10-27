@@ -83,7 +83,7 @@ nav {
   display: grid;
   grid-template-columns:1fr 2fr;
   justify-content: center;
- 
+
 }
 
 nav .Name h1{
@@ -126,11 +126,15 @@ nav i.fa-phone{
 }
 
 
-
-
-
-
 /************************Media queries for navbar*********************/
+@media (max-width:940px )
+{ nav .Name h1{
+    text-align: center;
+  }
+  nav .nav-links a{
+  margin:20px 10px 0 ;
+}
+}
 @media (max-width:800px )
 {
   nav {
@@ -146,9 +150,24 @@ nav i.fa-phone{
     text-align: center;
   }
   nav .nav-links a{
-  margin:20px 10px 0;
+  margin:20px 2% 0;
 }
 }
+@media (max-width:400px )
+{ nav .Name h1{
+    text-align: center;
+  }
+  nav .nav-links a{
+  margin: 20px auto;
+  padding: 0 0 0 0px;
+}
+nav .nav-links h4{
+  font-size: 10px;
+  text-align: center;
+  margin:0;
+}
+}
+
 
 
 
@@ -442,14 +461,97 @@ box-sizing: border-box;
 
 
 /* Section 2 ends Here*/
+/****************************about section*******************************/
+.about{
+  width: 100%;
+  display: grid;
 
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+.about #contact_us{
+  width: 100%;
+  display: grid;
+}
+.about #contact_us h1{
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+ #contact_us i{
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  align-self: center;  
+}
+#contact_us i.fas{
+  color:#02B9C5;
+}
+#contact_us i h2{
+  color: black;
+}
+.about .home-map{
+ width: 100%;
+ height: auto;
+ margin: auto;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+}
+.about .home-map iframe{
+  position: relative;
+  width: 600px;
+  height:400px;
+  overflow: hidden;
+  justify-content: center;
+  padding: 20px;
+ }
+ @media(max-width:650px ){
+  .about .home-map iframe{
+    width: 500px;
+    height: 380px;
+  }
+ }
+@media(max-width:530px ){
+  .about .home-map iframe{
+    width: 400px;
+    height: 300px;
+  }
+ }
+ @media(max-width:430px ){
+  .about .home-map iframe{
+    width: 80%;
+    height: 250px;
+  }
+ }
 
+.about .fas{
+  font-size: 50px;
+}
+.about h2{
+  width: auto;
+  padding: 10px;
+  font-size: 20px;
+}
 
-
-
-
-
-
+#about-me {
+  width: 90%;
+  display: grid;
+  margin: auto;
+}
+#about-me h1{
+  text-align: center;
+  font-size: 50px;
+  margin: auto 0 20px 0;
+}
+#about-me p{
+  width: 60%;
+  margin: auto auto 20px auto;
+  font-size: 14px;
+}
 
 
 
@@ -459,73 +561,7 @@ box-sizing: border-box;
 
 
 /*contact area starts here */
-.contact-area
-{
-    
-    padding-top: 80px;
-    
-}
-.contact-area h3
-{
 
-   width: auto;
-    display: flex;
-    justify-content: center;
-    margin:0px 0px 30px 0px;
-    font-size: 55px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.contact-area .contact-content
-{
-    width: 1fr;
-    height: 1fr;
-    display: grid;
-   grid-template-columns: repeat(3,1fr);
-    list-style: none;
-}
-@media (max-width: 1000px)
-{
-  .contact-area .contact-content
-  {
-    width: 1fr;
-    height: 1fr;
-    display: flex;
-   flex-wrap: wrap;
-    list-style: none;
-  }
-}
-
-.contact-content li
-{
-   
-    width: 100%;
-     margin: 40px 0px 50px 0px;
-
-}
-
-.contact-content li i
-{
-  font-size: 50px;
-  color:#23A6FF; 
-  margin-bottom: 25px;
-  display: flex;
-  text-decoration-style: none;
-  justify-content: center;
-}
-
-.contact-content li p
-{
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 1000px){
-  .contact-content li i{
-    color:#9EE400; 
-  }
-}
 /*contact area Ends here */
 
 footer
@@ -547,7 +583,7 @@ footer h2
   margin: 0px;
 }
 
-/*go to top starts*/
+/***************************go to top starts**********************/
 #myBtn {
    /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -574,23 +610,96 @@ footer h2
 /* go to top ends here*/
 
 /*Ask Query Section Here starts*/
-#mail-us{
 
-  width: 70vw;
-  display:flex;
-  background-color: rgba(0,0,0,0.8);
-  border:2px solid red;
-  justify-content: center;
-  margin: auto;
-  margin-top: 5%;
+
 }
-#mail-us h2{
-  display: grid;
+/********************** Login Section****************************/
+#user-info{
   position: relative;
-  font-size: 30px;
-  width: 100%;
-  color: white;
-
+  margin: 50px auto 50px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+#login-box{
+  background-color: #0098F0;
+  position: absolute;
+  height: 400px;
+  width: 40%;
+  margin: 50px auto auto 50px;
+  margin-right: auto;
+  box-sizing: border-box;
+  opacity: 0.4;
+  transition: 1s;
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.7);
+}
+#login-box:hover{
+  opacity: 1;
+  transition: 1s;
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.9);
 }
 
 
+#signup-box{
+  background-color: #DC3915;
+  position: relative;
+  width: 40%;
+  height: 400px;
+  margin: 50px 50px auto auto;
+  box-sizing: border-box;
+  float: right;
+ opacity: 0.4;
+  transition: 1s;
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.7);
+}
+#signup-box:hover{
+  opacity: 1;
+  transition: 1s;
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.9);
+}
+#user-info h1{
+  text-align: center;
+  font-size: 40px;
+}
+#user-info form input{
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  margin: 15px auto;
+  padding: 5px;
+    border:1px solid white;
+    transition: 1s;
+}
+#user-info form input:hover{
+  border-radius: 5px;
+  border:1px solid white;
+  transition: 1s;
+  transform: scale(1.04);
+}
+#user-info #submit{
+  
+  border-radius:0px;
+  padding: 10px;
+  border-radius: 2px;
+  transition: 0.5s;
+  border:1px solid white;
+}
+#user-info #submit:hover{
+  background-color:#23A6FF;
+  transition:0.4s;
+  border:1px solid #23A6FF;
+  border-radius: 5px;
+}
+@media (max-width: 700px){
+  #login-box{
+    width: 80%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 50px 50px auto auto;
+  }
+    #signup-box.signup{
+    width: 80%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 50px 50px auto auto;
+}
